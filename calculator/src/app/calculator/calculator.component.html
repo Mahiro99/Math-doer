@@ -1,0 +1,45 @@
+
+
+<h1>Calculator APP</h1>
+<div class="calculator-container">
+
+
+  <div class="display-container">{{calcService.mainDisplay}}</div>
+
+    <div class= "keypad">
+      <button class="button-num" *ngFor="let number of keyPadNumbers" value='{{number}}'(click)="clickKey($event)"> {{number}}</button>
+
+      <button class="button-all-clear" value='' (click)="clear($event)">AC</button>
+      <button class="button-del" (click)="del($event)">Del</button>
+
+      <button class="button-operator" value="%" (click)="clickKey($event)">%</button>
+      <button class="button-operator" value="/" (click)="clickKey($event)">/</button>
+
+      <!-- <button class ="button-num" value="1" (click)="clickKey($event)">1</button>
+      <button class ="button-num" value="2" (click)="clickKey($event)">2</button>
+      <button class ="button-num" value="3" (click)="clickKey($event)">3</button> -->
+
+      <button class="button-operator" value="+" (click)="clickKey($event)">+</button>
+
+      <!-- <button class ="button-num" value="4" (click)="clickKey($event)">4</button>
+      <button class ="button-num" value="5" (click)="clickKey($event)">5</button>
+      <button class ="button-num" value="6" (click)="clickKey($event)">6</button> -->
+
+      <button class="button-operator" value="-" (click)="clickKey($event)">-</button>
+
+      <!-- <button class ="button-num" value="7" (click)="clickKey($event)">7</button>
+      <button class ="button-num" value="8" (click)="clickKey($event)">8</button>
+      <button class ="button-num" value="9" (click)="clickKey($event)">9</button> -->
+
+      <button class="button-operator" value="*" (click)="clickKey($event)">*</button>
+      <button class ="button-num" value="." (click)="clickKey($event)">.</button>
+
+      <!-- <button class="button-num" value="0" (click)="clickKey($event)">0</button> -->
+
+      <button class="button-equal" value="=" (click)="equalsTo($event)">=</button>
+
+    </div>
+
+</div>
+
+
